@@ -4,7 +4,7 @@
     {
         public static bool endGame;
         public static int score;
-        public string[] lines = File.ReadAllLines(@"C:\Users\enoch\OneDrive\Documents\pacmanmaze.txt");
+        public string[] lines = File.ReadAllLines(@"C:\Users\enoch\source\repos\pac-man\pacmanmaze.txt");
         public string[,] ReadMaze()
         {
             int numRows = lines.Length;
