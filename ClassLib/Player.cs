@@ -11,9 +11,9 @@ namespace ClassLib
         public int positionX;
         public int positionY;
         public char sprite = '<';
-        public void createPlayer(Maze maze)
+        public void initializePlayer(Maze maze)
         {
-            maze.MazeArray[0, 5] = sprite;
+            maze.MazeArray[8, 14] = sprite;
         }
         public void Movement()
         {

@@ -9,8 +9,12 @@ namespace MyApp
         {
             Maze maze = new Maze();
             Player player = new Player();
+            Ooga ooga = new Ooga();
+            Booga booga = new Booga();
             maze.ReadMaze();
-            //player.createPlayer(maze);
+            player.initializePlayer(maze);
+            ooga.initializeGhost(maze);
+            booga.initializeGhost(maze);
             Console.WriteLine(maze.DrawMaze());
             
         }
