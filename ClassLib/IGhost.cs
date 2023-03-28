@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib
 {
-    public interface Interface1
+    public interface IGhost
     {
         int positionX { get; set; }
         int positionY { get; set; }
