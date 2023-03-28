@@ -8,7 +8,10 @@ namespace MyApp
         static void Main(string[] args)
         {
             Maze maze = new Maze();
-            Console.WriteLine(maze.DrawMaze(maze.ReadMaze()));
+            Player player = new Player();
+            maze.ReadMaze();
+            //player.createPlayer(maze);
+            Console.WriteLine(maze.DrawMaze());
             
         }
     }

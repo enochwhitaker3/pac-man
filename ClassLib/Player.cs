@@ -10,10 +10,10 @@ namespace ClassLib
     {
         public int positionX;
         public int positionY;
-        public string sprite = "<";
+        public char sprite = '<';
         public void createPlayer(Maze maze)
         {
-            maze.mazeArray[12, 0] = sprite;
+            maze.MazeArray[0, 5] = sprite;
         }
         public void Movement()
         {

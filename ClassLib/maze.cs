@@ -5,31 +5,30 @@
         public static bool endGame;
         public static int score;
         public string[] lines = File.ReadAllLines(@"C:\Users\enoch.whitaker\source\repos\pac-man\pacmanmaze.txt");
-        public string[,] ReadMaze()
+        public char[,] MazeArray;
+        public void ReadMaze()
         {
             int numRows = lines.Length;
-            int numCols = lines[0].Split(',').Length;
-            string[,] mazeArray = new string[numRows, numCols];
+            int numCols = lines[0].Length;
+            MazeArray = new char[numRows, numCols];
             for (int i = 0; i < numRows; i++)
             {
-                string[] values = lines[i].Split(',');
                 for (int j = 0; j < numCols; j++)
                 {
-                    mazeArray[i, j] = values[j];
+                    MazeArray[i, j] = lines[i][j];
                 }
             }
-            return mazeArray;
         }
-        public string DrawMaze(string[,] mazeArray)
+        public string DrawMaze()
         {
             string drawing = "";
             int numRows = lines.Length;
-            int numCols = lines[0].Split(',').Length;
+            int numCols = lines[0].Length;
             for (int i = 0; i < numRows; i++)
             {
                 for (int j = 0; j < numCols; j++)
                 {
-                    drawing += mazeArray[i, j] + " ";
+                    drawing += MazeArray[i, j];
                 }
                 drawing += "\n";
             }
