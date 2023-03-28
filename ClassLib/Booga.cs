@@ -15,9 +15,38 @@ namespace ClassLib
         {
             maze.MazeArray[6, 12] = sprite;
         }
-        public void Movement()
+        public static void Movement(Maze maze, char sprite)
         {
-
+            ConsoleKey e = new ConsoleKey();
+            if(e == ConsoleKey.RightArrow )
+            {
+                while(Console.KeyAvailable)
+                {
+                    e = Console.ReadKey(true).Key;
+                    maze.MazeArray[6, 13] = sprite;
+                }
+            }
+            else if (e == ConsoleKey.LeftArrow)
+            {
+                while (Console.KeyAvailable)
+                {
+                    e = Console.ReadKey(true).Key;
+                }
+            }
+            else if (e == ConsoleKey.UpArrow)
+            {
+                while (Console.KeyAvailable)
+                {
+                    e = Console.ReadKey(true).Key;
+                }
+            }
+            else if (e == ConsoleKey.DownArrow)
+            {
+                while (Console.KeyAvailable)
+                {
+                    e = Console.ReadKey(true).Key;
+                }
+            }
         }
     }
 }
