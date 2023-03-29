@@ -13,7 +13,7 @@ namespace ClassLib
         public int positionY {get; set;}
         public void initializeGhost(Maze maze)
         {
-            maze.MazeArray[6, 12] = sprite;
+            maze.MazeArray[6, 18] = sprite;
         }
         public static void Movement(Maze maze, char sprite)
         {

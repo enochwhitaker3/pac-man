@@ -2,7 +2,11 @@
 {
     public class Maze
     {
-        public string[] lines = File.ReadAllLines(@"C:\Users\enoch.whitaker\source\repos\pac-man\pacmanmaze.txt");
+        public Maze()
+        {
+            ReadMaze();
+        }
+        public string[] lines = File.ReadAllLines(@"C:\Users\enoch\source\repos\pac-man\pacmanmaze.txt");
         public static bool endGame;
         public static int score;
         public char[,] MazeArray;

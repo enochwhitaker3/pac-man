@@ -11,7 +11,6 @@ namespace MyApp
             Player player = new Player();
             Ooga ooga = new Ooga();
             Booga booga = new Booga();
-            maze.ReadMaze();
             player.initializePlayer(maze);
             ooga.initializeGhost(maze);
             booga.initializeGhost(maze);
