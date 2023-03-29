@@ -8,6 +8,10 @@ namespace ClassLib
 {
     public class Ooga : IGhost
     {
+        public Ooga(Maze maze)
+        {
+            initializeGhost(maze);
+        }
         public char sprite = 'O';
         public int positionX {  get; set; } 
         public int positionY { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace ClassLib
+﻿using System.Runtime.CompilerServices;
+
+namespace ClassLib
 {
     public class Maze
     {
@@ -7,7 +9,7 @@
             ReadMaze();
         }
         public string[] lines = File.ReadAllLines(@"C:\Users\enoch\source\repos\pac-man\pacmanmaze.txt");
-        public static bool endGame;
+        public static bool endGame = false;
         public static int score;
         public char[,] MazeArray;
         public void ReadMaze()
