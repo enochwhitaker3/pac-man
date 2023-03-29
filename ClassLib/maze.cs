@@ -8,7 +8,7 @@ namespace ClassLib
         {
             ReadMaze();
         }
-        public string[] lines = File.ReadAllLines(@"C:\Users\enoch\source\repos\pac-man\pacmanmaze.txt");   //Placeholder array used to hold the context of the read file
+        public string[] lines = File.ReadAllLines(@"C:\Users\enoch.whitaker\source\repos\pac-man\pacmanmaze.txt");   //Placeholder array used to hold the context of the read file
         public static bool endGame = false;                                                                 //Bool used to check if the game loop should be running or not
         public static int score;                                                                            //Integer used to display current score of the running game
         public char[,] MazeArray;                                                                           //The 2D char array used to hold and update the maze
