@@ -13,13 +13,13 @@ namespace ClassLib
             initializePlayer(maze);                                                         //Calls the initializePlayer method to set player as soon as a player object is created
         }
 
-        public int positionX;
-        public int positionY;
+        public int positionX = 8;
+        public int positionY = 14;
         public char sprite = '<';
 
         public void initializePlayer(Maze maze)         
         {
-            maze.MazeArray[8, 14] = sprite;                                                 //Adds the players sprite on to the maze in the default position
+            maze.MazeArray[positionX, positionY] = sprite;                                                 //Adds the players sprite on to the maze in the default position
         }
     }
 }
