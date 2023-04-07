@@ -36,6 +36,7 @@ namespace ClassLib
                 {
                     maze.MazeArray[positionX, positionY] = ' ';
                     positionY += 2;
+                    playerTrack(maze);
                     maze.MazeArray[positionX, positionY] = sprite;
                 }
             }
@@ -51,6 +52,7 @@ namespace ClassLib
                 {
                     maze.MazeArray[positionX, positionY] = ' ';
                     positionY-=2;
+                    playerTrack(maze);
                     maze.MazeArray[positionX, positionY] = sprite;
                 }
             }
@@ -58,15 +60,36 @@ namespace ClassLib
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX--;
+                playerTrack(maze);
                 maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.DownArrow)                                   //Checks the player input to see if it is the down arrow
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX++;
+                playerTrack(maze);
                 maze.MazeArray[positionX, positionY] = sprite;
             }
         }
-            
+        public void playerTrack(Maze maze)
+        {
+            if (positionY == 0)
+            {
+                positionY+=2;
+            }
+            else if (positionY == 30) 
+            {
+                positionY -= 2;
+            }
+            else if(positionX == 0)
+            {
+                positionX += 1;
+            }
+            else if (positionX == 12)
+            {
+                positionX -= 1;
+            }
+        }
+
     }
 }
