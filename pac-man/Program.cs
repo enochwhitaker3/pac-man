@@ -7,6 +7,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             Maze maze = new Maze();
             Player player = new Player(maze);
             Ooga ooga = new Ooga(maze);
