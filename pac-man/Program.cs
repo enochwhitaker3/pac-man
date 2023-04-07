@@ -24,23 +24,23 @@ namespace MyApp
             var keyInfo = Console.ReadKey();
             return keyInfo;
         }
-        public static void Movement(Player player, Maze maze,  ConsoleKeyInfo keyInfo)
+        public static void Movement(Player player, Maze maze,  ConsoleKeyInfo keyInfo)                                          //Gets the key pressed by the user and uses the data to update players position 
         {
             switch (keyInfo.Key)
             {
-                case ConsoleKey.RightArrow:                                                 //Checks the players input to see if it is the right arrow
+                case ConsoleKey.RightArrow:                  
                     player.updatePlayer(maze, keyInfo);
                     Console.Clear();
                     break;
-                case ConsoleKey.LeftArrow:                                                  //Checks the player input to see if it is the left arrow
+                case ConsoleKey.LeftArrow: 
                     player.updatePlayer(maze, keyInfo);                                      
                     Console.Clear();
                     break;
-                case ConsoleKey.UpArrow:                                                    //Checks the player input to see if it is the up arrow
+                case ConsoleKey.UpArrow:
                     player.updatePlayer(maze, keyInfo);                                      
                     Console.Clear();
                     break;
-                case ConsoleKey.DownArrow:                                                  //Checks the player input to see if it is the down arrow
+                case ConsoleKey.DownArrow: 
                     player.updatePlayer(maze, keyInfo);                                  
                     Console.Clear();
                     break;

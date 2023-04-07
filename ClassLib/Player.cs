@@ -24,63 +24,63 @@ namespace ClassLib
         }
         public void updatePlayer(Maze maze, ConsoleKeyInfo keyInfo)
         {
-            if (keyInfo.Key == ConsoleKey.RightArrow)                                       //Checks the players input to see if it is the right arrow
+            if (keyInfo.Key == ConsoleKey.RightArrow)                                       //Checks the players input to see if it is the right arrow and updates players position
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionY += 2;
-                if (playerTrack(maze) == true)
+                if (canMove(maze) == false)
                     positionY -= 2; 
                 maze.MazeArray[positionX, positionY] = sprite;
             }
-            else if (keyInfo.Key == ConsoleKey.LeftArrow)                                   //Checks the player input to see if it is the left arrow
+            else if (keyInfo.Key == ConsoleKey.LeftArrow)                                   //Checks the player input to see if it is the left arrow and updates players position
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionY -= 2;
-                if (playerTrack(maze) == true)
+                if (canMove(maze) == false)
                     positionY += 2;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
-            else if (keyInfo.Key == ConsoleKey.UpArrow)                                     //Checks the player input to see if it is the up arrow
+            else if (keyInfo.Key == ConsoleKey.UpArrow)                                     //Checks the player input to see if it is the up arrow and updates players position
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX--;
-                if (playerTrack(maze) == true)
+                if (canMove(maze) == false)
                     positionX++;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
-            else if (keyInfo.Key == ConsoleKey.DownArrow)                                   //Checks the player input to see if it is the down arrow
+            else if (keyInfo.Key == ConsoleKey.DownArrow)                                   //Checks the player input to see if it is the down arrow and updates players position
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX++;
-                if (playerTrack(maze) == true)
+                if (canMove(maze) == false)                                              
                     positionX--;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
         }
-        public bool playerTrack(Maze maze)
+        public bool canMove(Maze maze)                                                  //canMove checks if the player is able to move in the key pressed direction. False = no, True = yes
         {
             switch(maze.MazeArray[positionX, positionY])
             {
                 case '║':
-                    return true;
+                    return false;
                 case '═':
-                    return true;
+                    return false;
                 case '╔':
-                    return true;
+                    return false;
                 case '╗':
-                    return true;
+                    return false;
                 case '╚':
-                    return true;
+                    return false;
                 case '╝':
-                    return true;
+                    return false;
                 case '╣':
-                    return true; 
+                    return false; 
                 case '╠':
-                    return true;
+                    return false;
                 case '╦':
-                    return true;     
+                    return false;     
             }
-            return false;
+            return true;
         }
     }
 }
