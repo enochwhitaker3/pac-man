@@ -28,61 +28,59 @@ namespace ClassLib
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionY += 2;
-                playerTrack(maze);
+                if (playerTrack(maze) == true)
+                    positionY -= 2; 
                 maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.LeftArrow)                                   //Checks the player input to see if it is the left arrow
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionY -= 2;
-                playerTrack(maze);
+                if (playerTrack(maze) == true)
+                    positionY += 2;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.UpArrow)                                     //Checks the player input to see if it is the up arrow
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX--;
-                playerTrack(maze);
+                if (playerTrack(maze) == true)
+                    positionX++;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.DownArrow)                                   //Checks the player input to see if it is the down arrow
             {
                 maze.MazeArray[positionX, positionY] = ' ';
                 positionX++;
-                playerTrack(maze);
+                if (playerTrack(maze) == true)
+                    positionX--;
                 maze.MazeArray[positionX, positionY] = sprite;
             }
         }
-        public void playerTrack(Maze maze)
+        public bool playerTrack(Maze maze)
         {
             switch(maze.MazeArray[positionX, positionY])
             {
                 case '║':
-                    positionY += 2;
-                    break;
+                    return true;
+                case '═':
+                    return true;
                 case '╔':
-                    positionY += 2;
-                    break;
+                    return true;
                 case '╗':
-                    positionY += 2;
-                    break;
+                    return true;
                 case '╚':
-                    positionY += 2;
-                    break;
+                    return true;
                 case '╝':
-                    positionY += 2;
-                    break;
+                    return true;
                 case '╣':
-                    positionY += 2;
-                    break;
+                    return true; 
                 case '╠':
-                    positionY += 2;
-                    break;
+                    return true;
                 case '╦':
-                    positionY += 2;
-                    break;
+                    return true;     
             }
+            return false;
         }
-
     }
 }
