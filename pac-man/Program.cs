@@ -7,7 +7,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8;                                                                 //Allows special Unicode charecters to be printed to the console without error
             Maze maze = new Maze();
             Player player = new Player(maze);
             Ooga ooga = new Ooga(maze);
