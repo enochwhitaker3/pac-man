@@ -26,35 +26,17 @@ namespace ClassLib
         {
             if (keyInfo.Key == ConsoleKey.RightArrow)                                       //Checks the players input to see if it is the right arrow
             {
-                if (positionY % 2 == 1)
-                {
-                    maze.MazeArray[positionX, positionY] = ' ';
-                    positionY++;
-                    maze.MazeArray[positionX, positionY] = sprite;
-                }
-                else
-                {
-                    maze.MazeArray[positionX, positionY] = ' ';
-                    positionY += 2;
-                    playerTrack(maze);
-                    maze.MazeArray[positionX, positionY] = sprite;
-                }
+                maze.MazeArray[positionX, positionY] = ' ';
+                positionY += 2;
+                playerTrack(maze);
+                maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.LeftArrow)                                   //Checks the player input to see if it is the left arrow
             {
-                if (positionY % 2 == 1)
-                {
-                    maze.MazeArray[positionX, positionY] = ' ';
-                    positionY--;
-                    maze.MazeArray[positionX, positionY] = sprite;
-                }
-                else
-                {
-                    maze.MazeArray[positionX, positionY] = ' ';
-                    positionY-=2;
-                    playerTrack(maze);
-                    maze.MazeArray[positionX, positionY] = sprite;
-                }
+                maze.MazeArray[positionX, positionY] = ' ';
+                positionY -= 2;
+                playerTrack(maze);
+                maze.MazeArray[positionX, positionY] = sprite;
             }
             else if (keyInfo.Key == ConsoleKey.UpArrow)                                     //Checks the player input to see if it is the up arrow
             {
@@ -73,21 +55,32 @@ namespace ClassLib
         }
         public void playerTrack(Maze maze)
         {
-            if (positionY == 0)
+            switch(maze.MazeArray[positionX, positionY])
             {
-                positionY+=2;
-            }
-            else if (positionY == 30) 
-            {
-                positionY -= 2;
-            }
-            else if(positionX == 0)
-            {
-                positionX += 1;
-            }
-            else if (positionX == 12)
-            {
-                positionX -= 1;
+                case '║':
+                    positionY += 2;
+                    break;
+                case '╔':
+                    positionY += 2;
+                    break;
+                case '╗':
+                    positionY += 2;
+                    break;
+                case '╚':
+                    positionY += 2;
+                    break;
+                case '╝':
+                    positionY += 2;
+                    break;
+                case '╣':
+                    positionY += 2;
+                    break;
+                case '╠':
+                    positionY += 2;
+                    break;
+                case '╦':
+                    positionY += 2;
+                    break;
             }
         }
 
