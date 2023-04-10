@@ -14,6 +14,7 @@ namespace ClassLib
             initializePlayer(maze);                                                         //Calls the initializePlayer method to set player as soon as a player object is created
         }
 
+        public int score = 0;
         public int positionX = 8;
         public int positionY = 14;
         public char sprite = '<';
@@ -65,23 +66,7 @@ namespace ClassLib
         {
             switch(maze.MazeArray[positionX, positionY])
             {
-                case '║':
-                    return false;
-                case '═':
-                    return false;
-                case '╔':
-                    return false;
-                case '╗':
-                    return false;
-                case '╚':
-                    return false;
-                case '╝':
-                    return false;
-                case '╣':
-                    return false; 
-                case '╠':
-                    return false;
-                case '╦':
+                case '║': case '═': case '╔': case '╗': case '╚': case '╝': case '╣': case '╠': case '╦':
                     return false;
             }
             return true;
