@@ -25,6 +25,7 @@ namespace ClassLib
         }
         public void updatePlayer(Maze maze, ConsoleKeyInfo keyInfo)                         //Checks the players input to see if it is the right arrow and updates players position
         {
+            score += 10;
             if (keyInfo.Key == ConsoleKey.RightArrow)                                       
             {
                 sprite = '<';

@@ -16,6 +16,7 @@ namespace MyApp
      
             while (Maze.endGame != true)
             {
+                Console.Write($"SCORE : {player.score}\n");
                 Movement(player, maze, GetKey());
                 Console.WriteLine(maze.DrawMaze());
             }
